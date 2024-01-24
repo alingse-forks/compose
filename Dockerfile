@@ -1,7 +1,6 @@
 ARG DOCKER_VERSION=19.03
 ARG PYTHON_VERSION=3.10
 
-ARG BUILD_ALPINE_VERSION=3.12
 ARG BUILD_CENTOS_VERSION=7
 ARG BUILD_DEBIAN_VERSION=slim-stretch
 
@@ -13,7 +12,7 @@ ARG DISTRO=alpine
 
 FROM docker:${DOCKER_VERSION} AS docker-cli
 
-FROM python:${PYTHON_VERSION}-alpine${BUILD_ALPINE_VERSION} AS build-alpine
+FROM python:${PYTHON_VERSION} AS build-alpine
 RUN apk add --no-cache \
     bash \
     build-base \
