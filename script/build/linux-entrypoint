@@ -34,7 +34,7 @@ else
     echo "NOT compiling bootloader!!!"
 fi
 
-"${VENV}"/bin/pyinstaller --exclude-module pycrypto --exclude-module PyInstaller docker-compose.spec
+"${VENV}"/bin/pyinstaller --debug --exclude-module pycrypto --exclude-module PyInstaller docker-compose.spec
 ls -la dist/
 ldd dist/docker-compose
 mv dist/docker-compose /usr/local/bin
