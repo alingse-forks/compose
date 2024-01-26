@@ -35,7 +35,7 @@ exe = EXE(pyz,
           ],
 
           name='docker-compose',
-          debug=False,
+          debug=True,
           strip=None,
           upx=True,
           console=True,
